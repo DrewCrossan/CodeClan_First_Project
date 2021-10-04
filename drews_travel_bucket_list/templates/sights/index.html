@@ -1,29 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 <div id="remove-bullet">
-    <li><a href="/cities/new">Add a city</a></li>
+    <li><a href="/sights/new">Add a sight</a></li>
 </div>
-{% for city in all_cities %}
+{% for sight in all_sights %}
 <div class="country">
-    <a href="/cities/{{city.id}}">{{ city.city_name }}</a>
-    , <a  href="/countries/{{city.country.id}}">{{ city.country.country_name }}</a>
+    <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
+    , <a  href="/cities/{{sight.city.id}}">{{ sight.city.city_name }}</a>
 
     <!-- <div class="visited">
-        {{ city.visited }}
+        {{ sight.visited }}
     </div> -->
 
     <div class="buttons">
-        
+
         <p>Visited?</p>
 
-        {% if city.visited == True %}
+        {% if sight.visited == True %}
         <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
     {% else %}
         <i class="fa fa-times fa-1x" aria-hidden="true"></i>
     {% endif %}
 
 
-        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+        <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
         <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
         </form>
     </div>
