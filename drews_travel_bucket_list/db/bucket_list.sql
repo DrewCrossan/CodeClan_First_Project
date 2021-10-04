@@ -14,7 +14,7 @@ CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     city_name VARCHAR(255),
     visited BOOLEAN,
-    country_id INT REFERENCES countries(id)
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );
 
 CREATE TABLE sights (
@@ -22,5 +22,5 @@ CREATE TABLE sights (
     sight_name VARCHAR(255),
     description TEXT,
     visited BOOLEAN,
-    city_id INT REFERENCES cities(id)
+    city_id INT REFERENCES cities(id) ON DELETE CASCADE
 );
