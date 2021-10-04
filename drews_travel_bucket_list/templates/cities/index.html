@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<li><a href="/cities/new">Add a city</a></li>
+<div id="remove-bullet">
+    <li><a href="/cities/new">Add a city</a></li>
+</div>
 {% for city in all_cities %}
 <div class="country">
     <a href="/cities/{{city.id}}">{{ city.city_name }}</a>
-    ,<p>&nbsp;</p> <a  href="/countries/{{city.country.id}}">{{ city.country.country_name }}</a>
+    , <a  href="/countries/{{city.country.id}}">{{ city.country.country_name }}</a>
 
     <!-- <div class="visited">
         {{ city.visited }}
     </div> -->
+
     <div class="buttons">
-        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-        </form>
+
+        <p>Visited?</p>
 
         {% if city.visited == True %}
-        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
     {% else %}
-        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
     {% endif %}
+
+
+        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+        <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
+        </form>
     </div>
 
 </div>

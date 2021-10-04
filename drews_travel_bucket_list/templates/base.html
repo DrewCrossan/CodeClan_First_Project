@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>My Bucket List</title>
 </head>
 <body>
@@ -20,12 +23,12 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-      </div>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
     
-      {% block home %}
-      {% endblock %}
+    {% block home %}
+    {% endblock %}
 </body>
 </html>

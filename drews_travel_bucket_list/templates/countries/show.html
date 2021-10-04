@@ -1,11 +1,17 @@
-
+{% extends "base.html" %}
 {% block content %}
 <div>
     <p>{{ country.continent }}</p>
     <hr>
     <p>{{ country.country_name }}</p>
-    <p>Visited? {{ country.visited }}</p>
+    <p>Visited?
+    {% if country.visited == True %}
+        <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
+    {% else %}
+        <i class="fa fa-times fa-1x" style="color:red" aria-hidden="true"></i>
+    {% endif %}</p>
     <p><a href="/countries/{{ country.id }}/edit">Edit</a></p>
+    <hr>
     
 
     {% for city in all_cities %}

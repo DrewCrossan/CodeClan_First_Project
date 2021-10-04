@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<li><a href="/countries/new">Add a country</a></li>
+<div id="remove-bullet">
+    <li><a href="/countries/new">Add a country</a></li>
+</div>
 {% for country in all_countries %}
 <div class="country">
     <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
@@ -10,15 +12,18 @@
         {{ country.visited }}
     </div> -->
     <div class="buttons">
-        <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-        </form>
+
+        <p>Visited?</p>
 
         {% if country.visited == True %}
-        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
     {% else %}
-        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
     {% endif %}
+
+    <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+        <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
+        </form>
     </div>
 
 </div>
