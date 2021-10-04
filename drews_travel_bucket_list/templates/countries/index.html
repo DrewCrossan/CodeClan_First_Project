@@ -6,9 +6,9 @@
     <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
     , {{ country.continent }}
 
-    <div class="visited">
-        {{ country.visted }}
-    </div>
+    <!-- <div class="visited">
+        {{ country.visited }}
+    </div> -->
     <div class="buttons">
         <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
         <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
@@ -16,9 +16,9 @@
 
         {% if country.visited == True %}
         <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-      {% else %}
+    {% else %}
         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-      {% endif %}
+    {% endif %}
     </div>
 
 </div>
