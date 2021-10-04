@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<li><a href="/countries/new">Add a country</a></li>
 {% for country in all_countries %}
 <div class="country">
     <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
