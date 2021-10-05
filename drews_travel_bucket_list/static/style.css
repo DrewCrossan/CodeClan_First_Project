@@ -44,12 +44,19 @@ body{
 
     
   }
+  .all_lists {
+    /* background-color: rgb(255, 255, 255, 0.5); */
+    /* width: 80vw; */
+    /* position: center; */
+    justify-content: space-evenly;
+  }
 
   .country_list {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
+    text-align: center;
     
   }
 
@@ -58,6 +65,7 @@ body{
     flex-direction: column;
     background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
+    text-align: center;
   }
 
   .sight_list {
@@ -65,6 +73,7 @@ body{
     flex-direction: column;
     background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
+    text-align: center;
 
   }
 
