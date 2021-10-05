@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    <p>{{ sight.city.city_name }}</p>
+<div class="info">
+    <h2>{{ sight.city.city_name }}</h2>
     <hr>
     <p>{{ sight.sight_name }}</p>
     <p>{{ sight.description }}</p>
@@ -12,7 +12,7 @@
     <i class="fa fa-times fa-1x" style="color:red" aria-hidden="true"></i>
 {% endif %}</p>
     <p><a href="/sights/{{ sight.id }}/edit">Edit</a></p>
-    <hr>
+    
     
 
     <!-- {% for sight in all_sights %}

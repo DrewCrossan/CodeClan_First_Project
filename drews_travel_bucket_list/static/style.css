@@ -111,28 +111,49 @@ body{
     display: inline;
   }
 
+  .navbar {
+    width: 100%;
+    /* background-color: #555; */
+    overflow: auto;
+  }
+
   .menu{
     display: flex;
-    padding: 10px;
-    background-color: grey;
+    padding: 20px;
+    background-color: rgb(33, 43, 43);
     margin: 0;
     color: white;
   }
 
   .menu li a{
+    /* justify-content: space-evenly; */
     text-decoration: none;
+    
+    
   }
 
+  .menu li a:active {
+    background-color: rgb(97, 7, 97);
+  }
+
+  .menu li a:hover{
+    background-color: black;
+    padding: 20px;
+  }
   
   .menu li a:visited{
     color: white;
   }
   
   .menu li{
-    padding-right: 10px;
+    /* justify-content: space-evenly; */
+    /* padding-right: 10px; */
     list-style: none;
     color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+    font-family: "Indie flower", "Helvetica", arial, sans-serif; font-size: 20px;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
   }
   
 
@@ -142,7 +163,8 @@ body{
     justify-content: space-around;
     /* flex-wrap: wrap; */
     width: 60vw;
-    height: 100vh;
+    height: auto;
+    /* height: 400vh; */
     margin: 0 auto;
     background-color: rgb(255, 255, 255, 0.5);
     /* opacity: 50%; */
@@ -170,9 +192,9 @@ body{
     justify-content: space-evenly;
   }
 
-  .home-buttons {
+  /* .home-buttons {
     /* display: flex; */
-  }
+  /* } */
 
   #home-page {
     font-family: "Indie flower", "Helvetica" Arial;

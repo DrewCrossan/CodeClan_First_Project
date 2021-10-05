@@ -30,6 +30,7 @@
 <!-- {% block content %} -->
 <div class="all_lists">
 <div class="country_list">
+    <h2>Countries</h2>
 {% for country in all_countries %}
 {% if country.visited == False %}
         <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
@@ -39,6 +40,7 @@
 </div>
 
 <div class="city_list">
+    <h2>Cities</h2>
 {% for city in all_cities %}
 {% if city.visited == False %}
 
@@ -50,6 +52,7 @@
 </div>
 
 <div class="sight_list">
+    <h2>Sights</h2>
 {% for sight in all_sights %}
 {% if sight.visited == False %}
 

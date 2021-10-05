@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    <p>{{ country.continent }}</p>
+<div class="info">
+    <h2>{{ country.continent }}</h2>
     <hr>
     <p>{{ country.country_name }}</p>
     <p>Visited?
@@ -17,6 +17,7 @@
     {% for city in all_cities %}
 <div class="country">
     <a href="/cities/{{ city.id }}">{{ city.city_name }}</a>
+    <!-- <img src="{{ city.img_url }}>" -->
     <!-- {{ city.country.country_name }} -->
 
     <div class="visited">
