@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/sights/{{sight.id}}" method="post">
+    <div>
+        <label for="sight_name">Name of sights: </label>
+        <input type="text" id="sight_name" name="sight_name" value="{{sight.sight_name}}" required autofocus>
+    </div>
+
+    <div>
+        <label for="city">City: </label>
+        <select id="city" name="city_id">
+            <option value="{{sight.city.id}}">{{ sight.city.city_name }}</option>
+        </select>
+    </div>
+<!-- 
+    <div>
+        <label for="country">Country: </label>
+        <select id="country" name="country_id">
+        {% for country in all_countries %}
+        <option value="{{ city.country.id }}"
+            {% if city.country.id== country.id %} selected="selected"{% endif %}>
+            {{ city.country.country_name }}
+        </option>
+        {% endfor %}
+    </select>
+    </div> -->
+
+    <div>
+        <label for="description">Description</label>
+        <input type="textarea" id="description" name="description" value={{sight.description}} required>
+    </div>
+
+    <div>
+        <label for="visited">Visited: </label>
+        <select id="visited" name="visited">
+    
+        <option value="true"
+            {% if sight.visited == True %} selected="selected" {% endif %}>
+            True
+        </option>
+    
+        <option value="false"
+            {% if sight.visited == False %} selected="selected" {% endif %}>
+            False
+        </option>
+    
+        </select>
+    </div>
+
+
+<button type="submit">Update Sight</button>
+
+</form>
+
+{% endblock %}

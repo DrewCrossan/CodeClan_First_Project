@@ -66,6 +66,6 @@ def sights(city):
     results = run_sql(sql, values)
 
     for row in results:
-        sight = Sight(row['sight_name'], row['city'], row['visited'], row['id'])
+        sight = Sight(row['sight_name'], city, row['description'], row['visited'], row['id'])
         sights.append(sight)
     return sights

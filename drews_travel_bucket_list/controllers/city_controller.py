@@ -34,11 +34,12 @@ def create_city():
     return redirect('/cities')
 
 # SHOW
-# GET '/countries/<id>'
+# GET '/cities/<id>'
 @city_blueprint.route("/cities/<id>")
 def show_city(id):
     city = city_repository.select(id)
-    return render_template('cities/show.html', city=city)
+    sights = city_repository.sights(city)
+    return render_template('cities/show.html', city=city, all_sights=sights)
 
 # EDIT
 # GET '/cities/<id>/edit'
@@ -49,7 +50,7 @@ def edit_city(id):
     return render_template('cities/edit.html', city = city, all_countries = countries)
 
 # UPDATE
-# PUT '/tasks/<id>'
+# PUT '/cities/<id>'
 @city_blueprint.route("/cities/<id>", methods=['POST'])
 def update_city(id):
     name = request.form['city_name']

@@ -26,15 +26,42 @@
             </ul>
         </nav>
     </header>
+<!-- {% extends "base.html" %} -->
+<!-- {% block content %} -->
+<div class="all_lists">
+<div class="country_list">
+{% for country in all_countries %}
+{% if country.visited == False %}
+        <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
+        <!-- , {{ country.continent }} -->
+{% endif %}
+{% endfor %}
+</div>
 
-        <div class="container">
-            <div class="content">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
-    
-    {% block home %}
-    {% endblock %}
-</body>
-</html>
+<div class="city_list">
+{% for city in all_cities %}
+{% if city.visited == False %}
+
+        <a href="/cities/{{city.id}}">{{ city.city_name }}</a>
+        <!-- , <a  href="/countries/{{city.country.id}}">{{ city.country.country_name }}</a> -->
+
+{% endif %}
+{% endfor %}
+</div>
+
+<div class="sight_list">
+{% for sight in all_sights %}
+{% if sight.visited == False %}
+
+
+        <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
+    <!-- , <a  href="/cities/{{sight.city.id}}">{{ sight.city.city_name }}</a> -->
+
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
+
+
+<!-- {% endblock %} -->

@@ -1,8 +1,49 @@
-{% extends "base.html" %}
-{% block home %}
-<section id="home-image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>My Bucket List</title>
+</head>
+<!-- {% extends "base.html" %}
+{% block home %} -->
+<body>
 
-    <h1>Welcome to Travel Bucket List</h1>
 
-</section>
-{% endblock %}
+<section id="home-page">
+    <div class="home-title">
+        <h1>Welcome to Travel Bucket List</h1>
+    </div>
+    <div class="all-buttons">
+    
+    <div class="home-buttons">
+        <p><a href="/countries">
+            <img src="static/images/earth.png" alt="Countries" width="100" height="100">
+            </a></p>
+            <p>Countries</p>
+    </div>
+
+    <div class="home-buttons">
+        <p><a href="/cities">
+            <img src="static/images/skyscrapers.png" alt="Cities" width="100" height="100">
+            </a></p>
+            <p>Cities</p>
+    </div>
+
+    <div class="home-buttons">
+        <p><a href="/sights">
+            <img src="static/images/binoculars.png" alt="Sights" width="100" height="100">
+            </a></p>
+            <p>Sights</p>
+    </div>
+    </div>
+</body>
+<!-- </section> -->
+<!-- {% endblock %} -->
