@@ -84,11 +84,21 @@ body{
   }
   
 
+  .content {
+
+  }
+
   .container { 
     display: flex;
-    flex-wrap: wrap;
-    width: 300px;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    width: 60vw;
+    height: 100vh;
     margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.5);
+    /* opacity: 50%; */
+    /* z-index: -1; */
+    
   }
 
   .container li a{
