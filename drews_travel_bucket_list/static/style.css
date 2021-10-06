@@ -233,3 +233,20 @@ body{
   #remove-bullet {
     list-style-type: none;
   }
+
+  .foot {
+    display: flexbox;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(33, 43, 43);
+    width: 100%;
+    overflow: auto;
+    color: white;
+    justify-content: center;
+    position: bottom;
+    margin-top: 20px;
+  }
+
+  .info {
+    padding: 20px;
+  }

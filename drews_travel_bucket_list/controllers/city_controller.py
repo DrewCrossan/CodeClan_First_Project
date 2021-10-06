@@ -37,6 +37,7 @@ def create_city():
 # GET '/cities/<id>'
 @city_blueprint.route("/cities/<id>")
 def show_city(id):
+    # country = country_repository.select(id)
     city = city_repository.select(id)
     sights = city_repository.sights(city)
     return render_template('cities/show.html', city=city, all_sights=sights)
